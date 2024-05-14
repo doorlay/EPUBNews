@@ -7,6 +7,9 @@ A simple microservice to deliver Associated Press news to my Kindle every mornin
 2. Run the setup script to install required dependencies: `./setup.sh`
 3. Create an API key on the SendGrid website. After doing so, put your API key into the credentials.env file.
 
+## Testing
+To perform a local test, run `python3 src/tests.py`. A sample news file called test_file.txt will be created in the root directory.
+
 ## Deployment
 1. Export your AWS credentials for the account you're deploying to:
 ```

@@ -10,7 +10,9 @@ credentials.env
 
 # Ignore Lambda dependencies, but not Lambda code
 src/*
-!src/lambda.py
+!src/handler.py
+!src/exceptions.py
+!src/tests.py
 
 # CDK asset staging directory
 .cdk.staging
