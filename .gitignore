@@ -9,12 +9,13 @@ __pycache__
 credentials.env
 
 # Ignore Lambda dependencies, but not Lambda code
-lambda_code/*
-!lambda_code/lambda.py
+src/*
+!src/lambda.py
 
 # CDK asset staging directory
 .cdk.staging
 cdk.out
+cdk.json
 
 # Ignore virtual environment files
 bin/*
