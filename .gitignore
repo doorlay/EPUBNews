@@ -1,0 +1,23 @@
+*.swp
+package-lock.json
+__pycache__
+.pytest_cache
+.venv
+*.egg-info
+
+# Ignore credentials file
+credentials.env
+
+# Ignore Lambda dependencies, but not Lambda code
+lambda_code/*
+!lambda_code/lambda.py
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+
+# Ignore virtual environment files
+bin/*
+include/*
+lib/*
+pyvenv.cfg
