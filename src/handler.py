@@ -97,7 +97,7 @@ def write_to_outfile(article: str, outfile_name: str) -> None:
 def handler(event, context):
     # Write to a local file (instead of sending to Kindle) if "test_file" is present in the event
     if "test_file" in event:
-        file_name = event["test_file"]
+        file_name = f"/src/{event["test_file"]}"
     else:
         file_name = DEFAULT_FILE_NAME
     with open(file_name, "x"):
