@@ -9,7 +9,8 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName, FileType, Disposition
 
 date_obj = date.today()
-DEFAULT_FILE_NAME = f"/tmp/KindleNews {date_obj.strftime('%m-%d')}.txt"
+DEFAULT_FILE_NAME = "Associated Press News.txt"
+# DEFAULT_FILE_NAME = f"/tmp/KindleNews {date_obj.strftime('%m-%d')}.txt"
 
 def send_data_to_kindle(file_name: str, file_data: bytes) -> None:
     """Given a file name and raw data, sends this to my Kindle."""
@@ -97,7 +98,7 @@ def write_to_outfile(article: str, outfile_name: str) -> None:
 def handler(event, context):
     # Write to a local file (instead of sending to Kindle) if "test_file" is present in the event
     if "test_file" in event:
-        file_name = f"/src/{event["test_file"]}"
+        file_name = f"test_files/{event['test_file']}"
     else:
         file_name = DEFAULT_FILE_NAME
     with open(file_name, "x"):
