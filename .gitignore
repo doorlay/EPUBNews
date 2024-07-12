@@ -12,7 +12,7 @@ credentials.env
 src/*
 !src/handler.py
 !src/exceptions.py
-!src/tests.py
+!src/test.py
 
 # CDK asset staging directory
 .cdk.staging
@@ -20,10 +20,8 @@ cdk.out
 cdk.json
 
 # Ignore virtual environment files
-bin/*
-include/*
-lib/*
-pyvenv.cfg
+.venv/
 
-# Ignore testing folder
-test_files/
+# Ignore testing file, if present
+tests/*
+!tests/.gitkeep 

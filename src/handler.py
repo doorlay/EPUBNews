@@ -97,11 +97,11 @@ def write_to_outfile(article: str, outfile_name: str) -> None:
 
 def handler(event, context):
     # Write to a local file (instead of sending to Kindle) if "test_file" is present in the event
-    if "test_file" in event:
-        file_name = f"test_files/{event['test_file']}"
+    if "test" in event:
+        file_name = f"tests/{event['test']}"
     else:
         file_name = DEFAULT_FILE_NAME
-    with open(file_name, "x"):
+    with open(file_name, "w"):
         pass
 
     urls = ["https://apnews.com/us-news"]
@@ -123,7 +123,7 @@ def handler(event, context):
         for article in article_set:
             write_to_outfile(article, file_name)
     
-    if "test_file" not in event:
+    if "test" not in event:
         file_data = convert_to_bytes(file_name)
         send_data_to_kindle(file_name, file_data)
 
