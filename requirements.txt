@@ -1,3 +1,0 @@
-sendgrid
-beautifulsoup4
-requests

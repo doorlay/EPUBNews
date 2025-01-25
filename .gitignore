@@ -1,27 +1,10 @@
-*.swp
-package-lock.json
-__pycache__
-.pytest_cache
-.venv
-*.egg-info
+# Ignore environment variables
+.env
 
-# Ignore credentials file
-credentials.env
-
-# Ignore Lambda dependencies, but not Lambda code
-src/*
-!src/handler.py
-!src/exceptions.py
-!src/test.py
-
-# CDK asset staging directory
-.cdk.staging
-cdk.out
-cdk.json
-
-# Ignore virtual environment files
+# Ignore virtual env & build artifacts
 .venv/
+build/
+epub_news.egg-info/
 
-# Ignore testing file, if present
-tests/*
-!tests/.gitkeep 
+# Ignore cache files
+*.pyc

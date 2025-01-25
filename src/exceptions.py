@@ -1,2 +1,0 @@
-class FileScrapeException(Exception):
-    pass

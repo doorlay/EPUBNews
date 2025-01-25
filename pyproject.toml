@@ -1,0 +1,16 @@
+[project]
+name="epub-news"
+description="Scrape news articles and format them as .epubs."
+version="1.0.0"
+dependencies=[
+    "beautifulsoup4==4.12.3",
+    "requests==2.32.3",
+    "python-dotenv==1.0.1",
+]
+authors = [
+    {name = "Nicholas Doorlay", email = "nicholas@doorlay.com"},
+]
+readme = "README.md"
+
+[tool.setuptools]
+py-modules = []
