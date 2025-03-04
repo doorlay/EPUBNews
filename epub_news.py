@@ -38,7 +38,7 @@ def scrape_page(url: str) -> requests.models.Response:
     """Scrape a page and return a Response object."""
     page = requests.get(url)
     if page.status_code != 200:
-        raise FileScrapeException(f"Error grabbing page: {page.status_code}")
+        raise FileScrapingException(f"Error grabbing page: {page.status_code}")
     return page
 
 
